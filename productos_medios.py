@@ -21,8 +21,12 @@ def productos_medios(x_0,x_1,ri_num):
 
         y_results.append("y_" + str(i) + " = "+str(y))
 
+    print(y_results)
+    print()
+    print(x_results)
+    print()
+    print(ri_results)
 
-    return print(y_results, x_results, ri_results)
 
 
 def raiz(d, y_0):

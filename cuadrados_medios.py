@@ -9,11 +9,19 @@ def cuadrados_medios(ri_num, x_0):
     for i in range(ri_num):
         x_new = int(raiz(x_0, y))
         y = x_new ** 2
-        print("y_"+str(i)+ " = " + str(y))
-        ri_temp = "0."+str(x_new)
-        ri.append(ri_temp)
 
-        print("x_"+str(i + 1)+" = " +str(x_new))
+        if(len(str(x_new)) < d):
+            print("x_" + str(i + 1) + " = 0" + str(x_new))
+            ri_temp = "0.0" + str(x_new)
+            ri.append(ri_temp)
+        else:
+            print("x_" + str(i + 1) + " = " + str(x_new))
+            ri_temp = "0." + str(x_new)
+            ri.append(ri_temp)
+        print("y_"+str(i)+ " = " + str(y))
+
+
+
 
     return print(ri)
 
