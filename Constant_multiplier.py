@@ -25,10 +25,11 @@ def raiz(d, y_0):
 
     return numeros_medio
 
+
 def run_cm():
-    while(True):
+    while (True):
         try:
-            x = int(input('Ingresa la raiz: '))
+            x = int(input('Ingresa la semilla: '))
             k = int(input('Ingresa la constante multiplicadora: '))
             d = len(str(x))
             n = int(input('Ingresa la cantidad de ri: '))
@@ -36,9 +37,9 @@ def run_cm():
             print('Revisa tus inputs')
             continue
 
-        print('RAICES: ')
+        print('Nums: ')
         for i, t in enumerate(constant_multiplier(x, k, d, n)):
-            print('raiz ' + str(i) + ': = ' + str(t))
+            print('r' + str(i) + ': = ' + str(t))
 
         if input('Otra vez? S/N: ').upper() == 'N': break
 

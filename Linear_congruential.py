@@ -14,14 +14,14 @@ def run_lc():
             c = int(input('Ingresa c: '))
             k = int(input('Ingresa k: '))
             m = int(input('Ingresa la cantidad de ri (m): '))
-            x0 = int(input('Ingresa la raiz: '))
+            x0 = int(input('Ingresa la semilla: '))
         except ValueError:
             print('Revisa tus inputs')
             continue
 
-        print('RAICES: ')
+        print('Nums: ')
         for i, t in enumerate(linear_congruential(c, k, m, x0)):
-            print('raiz ' + str(i) + ': = ' + str(t))
+            print('r' + str(i) + ': = ' + str(t))
 
         if input('Otra vez? S/N: ').upper() == 'N': break
 
