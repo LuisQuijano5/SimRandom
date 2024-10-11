@@ -50,7 +50,7 @@ def raiz(d, y_0):
 def run_lc():
     while(True):
         try:
-            ri_num = int(input("Ingrese los numeros ri: "))
+            ri_num = int(input("Ingrese lo cantidad de ri: "))
             x_0 = int(input("Ingrese x_0: "))
             x_1 = int(input("Ingrese x_1: "))
         except ValueError:

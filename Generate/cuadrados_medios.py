@@ -43,7 +43,7 @@ def raiz(x_0, y_0):
 def run_lc():
     while(True):
         try:
-            ri_num = int(input("Ingrese los numeros ri: "))
+            ri_num = int(input("Ingrese los cantidad de ri: "))
             x_0 = int(input("Ingrese la semilla: "))
         except ValueError:
             print('Revisa tus inputs')
