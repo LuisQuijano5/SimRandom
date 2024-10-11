@@ -20,9 +20,6 @@ def cuadrados_medios(ri_num, x_0):
             ri.append(ri_temp)
         print("y_"+str(i)+ " = " + str(y))
 
-
-
-
     return print(ri)
 
 def raiz(x_0, y_0):
