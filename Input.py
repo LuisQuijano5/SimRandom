@@ -1,6 +1,6 @@
 def get_tabular_input():
     data = []
-    print("Ingresa los números aleatorios y presiona enter (Sugerencia copia y pega los valores de excel) : ")
+    print("Ingresa los números aleatorios y presiona enter (Tip, puedes copiar y pegar los valores de excel) : ")
 
     while True:
         line = input()
@@ -23,5 +23,3 @@ def get_significance():
             continue
         return a
 
-if __name__ == '__main__':
-    get_tabular_input()

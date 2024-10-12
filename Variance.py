@@ -10,7 +10,9 @@ def calc_variance(data):
     return su / (len(data) - 1)
 
 
-def run_variance(ri=inp()):
+def run_variance(ri):
+    if ri is None:
+        ri = inp()
     a = get_sign()
     n = len(ri)
     avg = calc_variance(ri)
@@ -18,9 +20,13 @@ def run_variance(ri=inp()):
     li = stats.chi2.ppf(a / 2, n - 1) / (12 * (n - 1))
 
     if li <= avg <= ls:
-        return "No se rechaza Ho por lo que el conjunto de valores ri tiene una varianza de 1/12"
-    return "Se rechaza Ho y se acepta H1 por lo que el conjunto de valores ri no tiene una varianza de 1/12"
+        print("Conclusion:", "No se rechaza Ho por lo que el conjunto de valores ri tiene una varianza de 1/12")
+        return
+    print("Conclusion:",
+          "Se rechaza Ho y se acepta H1 por lo que el conjunto de valores ri no tiene una varianza de 1/12")
+
+    return None
 
 
-if __name__ == '__main__':
-    print(run_variance())
+if __name__ == "__main__":
+    run_variance()

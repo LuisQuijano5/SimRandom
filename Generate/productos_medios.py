@@ -14,18 +14,19 @@ def productos_medios(x_0,x_1,ri_num):
 
         if(len(str(x_1)) < d):
             x_results.append("x_" + str(i + 2) + " = 0" + str(x_1))
-            ri_results.append("r_" + str(i + 1) + " = 0.0" + str(x_1))
+            ri_results.append(float("0.0" + str(x_1)))
         else:
             x_results.append("x_" + str(i + 2) + " = " + str(x_1))
-            ri_results.append("r_" + str(i + 1) + " = 0." + str(x_1))
+            ri_results.append(float("0." + str(x_1)))
 
         y_results.append("y_" + str(i) + " = "+str(y))
 
-    print(y_results)
-    print()
-    print(x_results)
-    print()
-    print(ri_results)
+    # print(y_results)
+    # print()
+    # print(x_results)
+    # print()
+    # print(ri_results)
+    return ri_results
 
 
 
@@ -57,8 +58,10 @@ def run_lc():
             print('Revisa tus inputs')
             continue
 
-        productos_medios(x_0, x_1, ri_num)
+        resultado = productos_medios(x_0, x_1, ri_num)
+        print("Numeros ri:", resultado)
         if input('Otra vez? S/N: ').upper() == 'N': break
+    return resultado
 
 if __name__ == '__main__':
     run_lc()

@@ -29,7 +29,9 @@ def variance(intervals, ei):
     return sum / ei
 
 
-def run_uniformity(ri=inp()):
+def run_uniformity(ri):
+    if ri is None:
+        ri = inp()
     a = get_sign()
     n = len(ri)
     m = int(math.sqrt(n))
@@ -40,9 +42,9 @@ def run_uniformity(ri=inp()):
     x = float(stats.chi2.ppf(1 - a, m - 1))
 
     if xo < x:
-        return "No se rechaza Ho por lo que el conjunto de valores ri es uniforme"
-    return "Se rechaza Ho y se acepta H1 por lo que el conjunto de valores ri no es uniforme"
+        print("Conclusion:", "No se rechaza Ho por lo que el conjunto de valores ri es uniforme")
+        return
+    print("Conclusion:", "Se rechaza Ho y se acepta H1 por lo que el conjunto de valores ri no es uniforme")
 
+    return None
 
-if __name__ == '__main__':
-    print(run_uniformity())

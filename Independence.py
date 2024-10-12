@@ -18,7 +18,9 @@ def count(data):
 
     return co
 
-def run_independence(ri=inp()):
+def run_independence(ri):
+    if ri is None:
+        ri = inp()
     a = get_sign()
     n = len(ri)
     mco = (2 * n - 1) / 3
@@ -28,9 +30,9 @@ def run_independence(ri=inp()):
     z = stats.norm.ppf(1 - a/2)
 
     if zo < z:
-        return "No se rechaza Ho por lo que el conjunto de valores ri es independiente"
-    return "Se rechaza Ho y se acepta H1 por lo que el conjunto de valores ri no es independiente"
+        print("Conclusion:", "No se rechaza Ho por lo que el conjunto de valores ri es independiente")
+        return
+    print("Conclusion:", "Se rechaza Ho y se acepta H1 por lo que el conjunto de valores ri no es independiente" )
 
+    return None
 
-if __name__ == "__main__":
-    print(run_independence())

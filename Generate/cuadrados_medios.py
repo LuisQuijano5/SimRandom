@@ -4,23 +4,23 @@ def cuadrados_medios(ri_num, x_0):
     ri = []
     x_new = 0
     y = x_0 ** 2
-    print("x_0 = " + str(x_0))
-    print("y_0 = " + str(y))
+    # print("x_0 = " + str(x_0))
+    # print("y_0 = " + str(y))
     for i in range(ri_num):
         x_new = int(raiz(x_0, y))
         y = x_new ** 2
 
         if(len(str(x_new)) < d):
-            print("x_" + str(i + 1) + " = 0" + str(x_new))
+            #print("x_" + str(i + 1) + " = 0" + str(x_new))
             ri_temp = "0.0" + str(x_new)
-            ri.append(ri_temp)
+            ri.append(float(ri_temp))
         else:
-            print("x_" + str(i + 1) + " = " + str(x_new))
+            #print("x_" + str(i + 1) + " = " + str(x_new))
             ri_temp = "0." + str(x_new)
-            ri.append(ri_temp)
-        print("y_"+str(i)+ " = " + str(y))
+            ri.append(float(ri_temp))
+        #print("y_"+str(i)+ " = " + str(y))
 
-    return print(ri)
+    return ri
 
 def raiz(x_0, y_0):
     d = len(str(x_0))
@@ -50,8 +50,9 @@ def run_lc():
             continue
 
         resultado = cuadrados_medios(ri_num, x_0)
-        print(resultado)
+        print("Numeros ri:", resultado)
         if input('Otra vez? S/N: ').upper() == 'N': break
+    return resultado
 
 if __name__ == '__main__':
     run_lc()
